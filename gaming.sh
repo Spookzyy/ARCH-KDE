@@ -17,7 +17,7 @@ then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-sudo pacman -S discord
+sudo pacman -Syu discord
 
 ##clear 
 clear
@@ -29,7 +29,7 @@ then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-sudo pacman -S cartridges
+sudo pacman -Syu cartridges
 
 ##clear
 clear
@@ -41,7 +41,7 @@ then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-sudo pacman -S lutris
+sudo pacman -Syu lutris
 ##clear 
 clear
 
@@ -52,8 +52,8 @@ then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-sudo pacman -S goverlay steam
-yay -S dxvk
+sudo pacman -Syu goverlay steam
+yay -Syu dxvk
 
 #clear
 clear
