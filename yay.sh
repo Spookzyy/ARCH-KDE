@@ -21,5 +21,3 @@ makepkg -si
 
 ## delete the yay folder
 rm -rf yay 
-
-## delete
