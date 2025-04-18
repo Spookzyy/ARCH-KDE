@@ -7,7 +7,7 @@ then
 fi
 
 ## ask to instll discord
-read -p " install discord? y/n : " -n 1 -r
+read -p "install discord? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
