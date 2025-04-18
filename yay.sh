@@ -1,5 +1,4 @@
 ## Check if running as root. If root, script will exit
-if [[ $EUID -eq 0 ]]; then
     echo "${ERROR}  This script should ${WARNING}NOT${RESET} be executed as root!! Exiting......." | tee -a "$LOG"
     printf "\n%.0s" {1..2} 
     exit 1
