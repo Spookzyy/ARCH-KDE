@@ -1,10 +1,3 @@
-## Check if running as root. If root, script will exit
-if [[ $EUID -eq 0 ]]; then
-    echo "${ERROR}  This script should ${WARNING}NOT${RESET} be executed as root!! Exiting......." |
-    printf "\n%.0s" {1..2} 
-    exit 1
-fi
-
 ## confirtmation prmpt to install
 read -p "this scipt only installs yay and git only!! Are you sure you want to continue? y/n : " -n 1 -r
 echo    # (optional) move to a new line
