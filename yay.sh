@@ -1,5 +1,5 @@
 ## Check if running as root. If root, script will exit
-    echo "${ERROR}  This script should ${WARNING}NOT${RESET} be executed as root!! Exiting......." | tee -a "$LOG"
+    echo "${ERROR}  This script should ${WARNING}NOT${RESET} be executed as root!! Exiting......." |
     printf "\n%.0s" {1..2} 
     exit 1
 fi
