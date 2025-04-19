@@ -22,6 +22,7 @@ sudo pacman -Syu discord
 ##clear 
 clear
 
+## ask to install cartidges
 read -p "install cartridges? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -34,6 +35,7 @@ sudo pacman -Syu cartridges
 ##clear
 clear
 
+## ask to install lutris
 read -p "install lutris? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -42,6 +44,7 @@ then
 fi
 
 sudo pacman -Syu lutris
+
 ##clear 
 clear
 
