@@ -1,39 +1,62 @@
-## confirtmation prmpt to install
-read -p "this scipt only installs yay and git only!! Are you sure you want to continue? y/n : " -n 1 -r
+read -p "this scipt only install things required for normal gaming/work uses!! Are you sure you want to continue? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-## install base-devel and git 
-
-sudo pacman -Syu
-sudo pacman -S --needed base-devel git
-
-## clear terminal
+##clear
 clear
 
-## install yay VIA git
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-## delete the yay folder
-rm -rf yay 
-
-## confirtmation prmpt to install
-read -p "this scipt only install things for gaming only!! Are you sure you want to continue? y/n : " -n 1 -r
+read -p "install grub-customizer? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
 
-##clear for questions 
-clear
+yay -S grub-customizer
 
-## ask to instll discord
+read -p "would you like to install all fonts i prefer to use (some apps might not work if not added)? y/n : " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
+
+ yay -S ttf-material-design-icons terminus-font-ttf
+
+## ask to install panel-customiser FOR KDE ONLY.
+read -p "install panel-customizer (KDE ONLY? y/n : " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
+
+yay -S plasma6-applets-panel-colorizer
+
+## ask to install rxfetch (WITH FONTS)
+read -p "install timeshift? y/n : " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
+
+yay -S rxfetch 
+#ask to install timeshift
+
+read -p "install timeshift? y/n : " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
+
+ sudo pacman -S timeshift
+
+## ask to install discord
 read -p "install discord? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -42,6 +65,9 @@ then
 fi
 
 sudo pacman -Syu discord
+
+##clear 
+clear
 
 ## ask to install cartidges
 read -p "install cartridges? y/n : " -n 1 -r
@@ -53,6 +79,9 @@ fi
 
 sudo pacman -Syu cartridges
 
+##clear
+clear
+
 ## ask to install lutris
 read -p "install lutris? y/n : " -n 1 -r
 echo    # (optional) move to a new line
@@ -62,6 +91,9 @@ then
 fi
 
 sudo pacman -Syu lutris
+
+##clear 
+clear
 
 read -p "install goverlay dxvk and steam? MAKE SURE MULTIB IS ENABLED OR STEAM WONT DOWNLOAD. y/n : " -n 1 -r
 echo    # (optional) move to a new line
@@ -76,11 +108,3 @@ yay -Syu dxvk
 #clear
 clear
 
-## ask to install coolercontrol
-read -p "install coolercontrol pcsx2 rpsc3 nitch btop and lact? y/n :" -n 1 -r
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
-fi
-
-yay -S coolercontrol cooler control pcsx2 nitch lact btop
