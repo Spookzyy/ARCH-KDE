@@ -37,7 +37,7 @@ fi
 yay -S plasma6-applets-panel-colorizer
 
 ## ask to install rxfetch (WITH FONTS)
-read -p "install timeshift? y/n : " -n 1 -r
+read -p "install rxfetch? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
