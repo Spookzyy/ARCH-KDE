@@ -76,3 +76,11 @@ yay -Syu dxvk
 #clear
 clear
 
+## ask to install coolercontrol
+read -p "install coolercontrol pcsx2 rpsc3 nitch btop and lact? y/n :" -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
+
+yay -S coolercontrol cooler control pcsx2 nitch lact btop
