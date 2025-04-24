@@ -8,6 +8,23 @@ fi
 ##clear
 clear
 
+read -p "this will install YAY Package installer Are you sure you want to continue? y/n : " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
+
+##clear 
+clear 
+
+sudo pacman -Syu
+sudo pacman -S --needed base-devel git
+sudo pacman -S git 
+git clone https://aur.archlinux.org/yay.git
+cd yay 
+makepkg -si
+
 read -p "install grub-customizer? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
