@@ -1,6 +1,9 @@
 📓 README
 
-💻 Laptop kde install if im lazy and bored. 
+💻 OS : Bazzite KDE
+
+🚚 Packages : 2708 (rpm), 69 (flatpak)
+
 
 
 
