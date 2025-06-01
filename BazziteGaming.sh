@@ -8,6 +8,25 @@ fi
 ##clear
 clear
 
+##Enable Multib, got this part off the script from my uncle.
+
+multilib() {
+       which pacman >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        _has_multilib=$(grep -n "[multilib]" /etc/pacman.conf | cut -f1 -d:)
+        if [[ -z $_has_multilib ]]; then
+            echo -e "\n[lib32]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
+        else
+            sudo sed -i -e "${_has_multilib}s/^#//" /etc/pacman.conf
+            _has_multilib=$((${_has_multilib} + 1))
+            sudo sed -i -e "${_has_multilib}s/^#//" /etc/pacman.conf
+        fi
+        sudo pacman -Syy
+    fi
+}
+multilib
+
+
 read -p "this will install YAY Package installer Are you sure you want to continue? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -112,13 +131,13 @@ sudo pacman -Syu lutris
 ##clear 
 clear
 
-read -p "install goverlay dxvk and steam? MAKE SURE MULTIB IS ENABLED OR STEAM WONT DOWNLOAD. y/n : " -n 1 -r
+read -p "install goverlay dxvk and steam? y/n : " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
 fi
-
+ 
 sudo pacman -Syu goverlay steam
 yay -Syu dxvk
 
