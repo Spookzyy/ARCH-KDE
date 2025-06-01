@@ -10,7 +10,7 @@
 
 💻 OS : Bazzite KDE
 
-🚚 Packages : 2708 (rpm), 71 (flatpak)
+🚚 Packages : 2709 (rpm), 71 (flatpak)
 
 
 
