@@ -1,10 +1,9 @@
 
 🤖 Specs 
+
+
 ----------------------------------------------------------------------------------------------------------
-
-https://github.com/Spookzyy/ARCH-KDE/blob/main/screenshots/fastfetch.avif
-
-
+![fastfetch](https://github.com/user-attachments/assets/b11e29e3-80b4-4e91-a400-cb132db7368d)
 ----------------------------------------------------------------------------------------------------------
 
 📓 README
