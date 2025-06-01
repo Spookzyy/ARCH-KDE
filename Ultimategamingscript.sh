@@ -333,5 +333,3 @@ final() {
         echo -e "INVALID VALUE!"
         final
     fi
-}
-final
