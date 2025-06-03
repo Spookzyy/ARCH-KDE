@@ -5,10 +5,10 @@ if [ $? -eq 0 ]; then
     which apt >/dev/null 2>&1
     if [ $? != 0 ]; then
         clear
-        echo -e "╔═══════════════════════════════════════════════════╗"
-        echo -e "║ THIS SCRIPT ONLY WORKS ON ARCH, UBUNTU AND FEDORA ║"
-        echo -e "║                                                   ║"
-        echo -e "╚═══════════════════════════════════════════════════╝"
+        echo -e "╔═════════════════════════════════════════════════════════════════╗"
+        echo -e "║ THIS SCRIPT ONLY WORKS ON ARCH, UBUNTU AND FEDORA               ║"
+        echo -e "║ Bazzite Coming soon!!                                           ║"
+        echo -e "╚═════════════════════════════════════════════════════════════════╝"
         echo -e ""
         exit 1
     fi
@@ -27,10 +27,10 @@ if [ $? -eq 0 ]; then
     which pacman >/dev/null 2>&1
     if [ $? != 0 ]; then
         clear
-        echo -e "╔═══════════════════════════════════════════════════╗"
-        echo -e "║ THIS SCRIPT ONLY WORKS ON ARCH, UBUNTU AND FEDORA ║"
-        echo -e "║                                                   ║"
-        echo -e "╚═══════════════════════════════════════════════════╝"
+        echo -e "╔═════════════════════════════════════════════════════════════════╗"
+        echo -e "║ THIS SCRIPT ONLY WORKS ON ARCH, UBUNTU AND FEDORA               ║"
+        echo -e "║ Bazzite Coming soon!!                                           ║"
+        echo -e "╚═════════════════════════════════════════════════════════════════╝"
         echo -e ""
         exit 1
     fi
