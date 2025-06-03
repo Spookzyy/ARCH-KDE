@@ -236,7 +236,6 @@ prompt_2
 
 prompt_3() {
     clear
-    ulimit -n 1048576
     ulimit -Hn
     echo -e ""
     echo -e "IF THIS ABOVE RETURNS MORE THAN 500,000 THEN ESYNC IS ENABLED!"
