@@ -16,8 +16,8 @@ else
     export DEBIAN_FRONTEND=noninteractive
     clear
     echo -e "╔═══════════════════════════════════════════════════╗"
-    echo -e "║Spookzy's | ultimate-gaming-setup-wizard | greetings!║"
-    echo -e "║                                                   ║"
+    echo -e "║Spookzy's | ultimate-gaming-setup-wizard |         ║"
+    echo -e "║Greetings!!                                        ║"
     echo -e "╚═══════════════════════════════════════════════════╝"
     echo -e ""
 fi
@@ -37,8 +37,8 @@ if [ $? -eq 0 ]; then
 else
     clear
     echo -e "╔═══════════════════════════════════════════════════╗"
-    echo -e "║Spookzy's | ultimate-gaming-setup-wizard | greetings!║"
-    echo -e "║                                                   ║"
+    echo -e "║Spookzy's | ultimate-gaming-setup-wizard |         ║"
+    echo -e "║Greetings!!                                        ║"
     echo -e "╚═══════════════════════════════════════════════════╝"
     echo -e ""
 fi
