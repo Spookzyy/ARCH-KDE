@@ -94,24 +94,6 @@ multilib() {
 }
 multilib
 
-
-prompt_0() {
-    echo -e "CHOOSE THE COMPATIBLE WHICH IS IN BELOW WITH YOUR HARDWARE. (RETURN IS: NONE)"
-    echo -e "1. : AMD"
-    echo -e "2. : NVIDIA"
-    read -p $'>_: ' nock
-    if [[ "$nock" == "1" ]]; then
-        amd
-    fi
-    if [[ "$nock" == "2" ]]; then
-        nvidia
-    fi
-    if [[ "$nock" == "" ]]; then
-        clear
-    fi
-}
-prompt_0
-
 xanmod() {
     which apt >/dev/null 2>&1
     if [ $? -eq 0 ]; then
